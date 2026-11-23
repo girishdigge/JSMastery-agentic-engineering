@@ -1,0 +1,10 @@
+{
+  "name": "Error Handling Summary",
+  "steps": [
+    {
+      "id": "create-workflow",
+      "type": "create-workflow",
+      "prompt": "Create a workflow to summarize error handling across API routes in this project. Do not run any code."
+    }
+  ]
+}

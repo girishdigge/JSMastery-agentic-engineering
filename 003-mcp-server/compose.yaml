@@ -1,0 +1,26 @@
+services:
+  postgres:
+    image: postgres:19-trixie
+    restart: unless-stopped
+
+    env_file:
+      - .env.db
+
+    ports:
+      - "127.0.0.1:5433:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql
+
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - 'pg_isready -U "$${POSTGRES_USER}" -d "$${POSTGRES_DB}"'
+      interval: 5s
+      timeout: 3s
+      retries: 20
+      start_period: 10s
+
+volumes:
+  postgres_data:
+    name: jsm_003_mcp_postgres_data

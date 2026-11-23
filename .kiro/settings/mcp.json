@@ -1,0 +1,26 @@
+{
+  "mcpServers": {
+    "prisma": {
+      "url": "https://mcp.prisma.io/mcp"
+    },
+    "postgres-local": {
+      "command": "/bin/bash",
+      "args": [
+        "/home/girish/code/AI/JSMastery-agentic-engineering/003-mcp-server/scripts/start-postgres-mcp.sh"
+      ],
+      "disabled": false,
+      "disabledTools": [
+        "execute",
+        "connect_db"
+      ]
+    },
+    "postgres-seed": {
+  "command": "/bin/bash",
+  "args": [
+    "/home/girish/code/AI/JSMastery-agentic-engineering/003-mcp-server/scripts/start-postgres-seed-mcp.sh"
+  ],
+  "disabled": false,
+  "autoApprove": []
+    }
+  }
+}
